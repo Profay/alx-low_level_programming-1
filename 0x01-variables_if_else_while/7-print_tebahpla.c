@@ -10,9 +10,9 @@ int main(void)
 	char c;
 	int i;
 
-	i = 26;
+	i = 0;
 	c = 'z';
-	while (i > 0)
+	while (i < 26)
 	{
 		putchar(c - i);
 		i++;
