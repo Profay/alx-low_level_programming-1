@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
@@ -10,8 +8,9 @@
 int main(void)
 {
 	char c;
-        int i = 0;	
+	int i;
 
+	i = 0;
 	c = 'a'; 
 	while (i < 26)
 	{ 
@@ -21,4 +20,3 @@ int main(void)
 	putchar(10);
 	return (0);
 }
-
