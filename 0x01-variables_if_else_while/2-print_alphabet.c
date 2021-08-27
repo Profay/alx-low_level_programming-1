@@ -11,12 +11,12 @@ int main(void)
 	int i;
 
 	i = 0;
-	c = 'a'; 
+	c = 'a';
 	while (i < 26)
-	{ 
+	{
 		putchar(c + i);
-		i++; 
-	}	
+		i++;
+	}
 	putchar(10);
 	return (0);
 }
