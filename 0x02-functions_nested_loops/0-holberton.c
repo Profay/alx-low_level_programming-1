@@ -1,4 +1,4 @@
-#include <holberton.h> 
+#include "holberton.h" 
 
 /**
  * main - check the code for ALX School students. 
@@ -17,5 +17,6 @@ int main(void)
 		i++;
 	}
 	_putchar(48);
+
 	return 0;
 }
