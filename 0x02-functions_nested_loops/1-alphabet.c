@@ -7,24 +7,18 @@
  *
  * you can only use _putchar twice in your code
  *
- * Return: always 0.
+ * Return: no return value.
  * */
-
-void print_alphabet(void);
-
-int main(void)
-{
-	print_alphabet();
-	_putchar(10);
-}
 
 void print_alphabet(void)
 {
 	char c = 'a';
-	int i;
+	int i = 0;
 
-	for (i = 0; i < 26; i++)
+	while (i < 26)
 	{
 		_putchar(c + i);
+		i++;
 	}
+	_putchar(10);
 }
