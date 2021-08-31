@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char s[] = "Holberton";
+	char s[] = "_putchar";
 	int i = 0;
 
 	while (s[i] != '\0')
