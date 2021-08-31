@@ -1,14 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code for ALX School students.
+ * print_alphabet - prints the english alphabet from a to z.
  *
- * Function that prints the alphabet, followed by a new line.
- *
- * Prototype: void print_alphabet(void);
- *
- * You can only use _putchar twice in your code
- *
+ * Return: nothing.
  */
 
 void print_alphabet(void)
