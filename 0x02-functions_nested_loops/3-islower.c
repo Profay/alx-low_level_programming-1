@@ -3,7 +3,7 @@
 /**
  * _islower - checks for lowercase character.
  *
- * int c - parameter to the custom function
+ * @c - parameter to the custom function
  *
  * Return: 1 if c is lowercase and 0 otherwise
  */
