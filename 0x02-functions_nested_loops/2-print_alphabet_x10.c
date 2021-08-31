@@ -10,17 +10,6 @@
  * Return: always 0;
  */
 
-/* Prototype */
-void print_alphabet_x10(void);
-
-int main(void)
-{
-	print_alphabet_x10();
-
-	return 0;
-}
-
-/* Custom function */
 void print_alphabet_x10(void)
 {
 	char c = 'a';
@@ -36,5 +25,7 @@ void print_alphabet_x10(void)
 		_putchar(10);
 		i++;
 	}
+
+	return 0;
 }
 
