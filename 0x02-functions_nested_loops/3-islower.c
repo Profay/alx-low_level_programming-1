@@ -3,7 +3,7 @@
 /**
  * _islower - checks for lowercase character.
  *
- * @c - parameter to the custom function
+ * @c: char type letter
  *
  * Return: 1 if c is lowercase and 0 otherwise
  */
