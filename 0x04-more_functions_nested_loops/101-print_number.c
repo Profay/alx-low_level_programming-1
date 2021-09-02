@@ -1,47 +1,53 @@
 #include "main.h"
+/**
+ *power - getting the power of the integer.
+ *@i: the variable i will be decrementing
+ *Return - an integer of t will be returned.
+ */
+int power(int i)
+{
+	int t;
+
+	t = 10;
+	while (i > 1)
+	{
+		t *= 10;
+		i--;
+	}
+	return (t);
+
+}
 
 /**
- * print_number - Function that prints an integer.
- * @n: int type number
- * Description: Can only use _putchar to print.
+ *print_number - printing out an integer.
+ *@n: The variable n is being evaluated.
+ *Return: the value of 0 will be returned.
  */
 void print_number(int n)
 {
-	long m; /* power of 10 */
-	int c; /* boolean check */
-	long num; /* convert int to long */
+	long c, s;
 
-	num = n;
-	/* negatives */
-	if (num < 0)
-	{
-		num *= -1;
-		_putchar('-');
-	}
-
-	/* count up */
-	m = 1;
 	c = 1;
-	while (c)
+	if (n < 0)
 	{
-		if (num / (m * 10) > 0)
-			m *= 10;
-		else
-			c = 0;
+		n *= -1;
+		_putchar(45);
 	}
-
-	/* count down */
-	while (num >= 0)
+	while (n / power(c) >= 10)
 	{
-		if (m == 1)
-		{
-			_putchar(num % 10 + '0');
-			num = -1;
-		}
-		else
-		{
-			_putchar((num / m % 10) + '0');
-			m /= 10;
-		}
+		c++;
+	}
+	s = n / power(c);
+	_putchar(s + '0');
+	while (c > 1)
+	{
+		s = n % power(c--);
+		s = s / power(c);
+		_putchar(s + '0');
+	}
+	s = n % 10;
+	if (n != 0)
+	{
+		_putchar(s + '0');
 	}
 }
