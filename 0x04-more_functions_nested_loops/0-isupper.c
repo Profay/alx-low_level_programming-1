@@ -8,16 +8,6 @@
 
 int _isupper(int c)
 {
-	char uppercase = 'A';
-
-	while (uppercase <= 'Z')
-	{
-		if (c == uppercase)
-		{
-			return (1);
-		}
-		uppercase++;
-	}
-
-	return (0);
-}
+	if (c >= 65 && c <= 91)
+		return (0);
+	return (1);
