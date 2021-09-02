@@ -1,53 +1,38 @@
 #include "main.h"
+
+void print_integer(int m);
+
 /**
- *power - getting the power of the integer.
- *@i: the variable i will be decrementing
- *Return - an integer of t will be returned.
+ * print_number - a function that prints an integer.
+ * @n: An input integer
+ * Return: Nothing
  */
-int power(int i)
+
+void print_number(int n)
 {
-	int t;
-
-	t = 10;
-	while (i > 1)
+	if (n == 0)
+		_putchar('0');
+	else if (n < 0)
 	{
-		t *= 10;
-		i--;
+		_putchar('-');
+		print_integer(n * -1);
 	}
-	return (t);
-
+	else
+		print_integer(n);
 }
 
 /**
- *print_number - printing out an integer.
- *@n: The variable n is being evaluated.
- *Return: the value of 0 will be returned.
+ * print_integer - A function to priting n
+ * @m: an input unsigned integer
+ * Return: Nothing
  */
-void print_number(int n)
+void print_integer(int m)
 {
-	long c, s;
+	int i = 1000000000;
 
-	c = 1;
-	if (n < 0)
-	{
-		n *= -1;
-		_putchar(45);
-	}
-	while (n / power(c) >= 10)
-	{
-		c++;
-	}
-	s = n / power(c);
-	_putchar(s + '0');
-	while (c > 1)
-	{
-		s = n % power(c--);
-		s = s / power(c);
-		_putchar(s + '0');
-	}
-	s = n % 10;
-	if (n != 0)
-	{
-		_putchar(s + '0');
-	}
+	for (; i >= 1; i /= 10)
+		if (m / i != 0)
+		{
+			_putchar((m / i) % 10 + '0');
+		}
 }
