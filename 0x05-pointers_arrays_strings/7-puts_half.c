@@ -22,9 +22,9 @@ void puts_half(char *str)
 	{
 		i = (i - 1) / 2;
 
-		for (; str[i] != '\0'; i++)
+		for (; str[i] != '\0';)
 		{
-			_putchar(str[i]);
+			_putchar(str[i++]);
 		}
 		_putchar(10);
 	}
@@ -32,9 +32,9 @@ void puts_half(char *str)
 	{
 		i /= 2;
 
-		for (; str[i] != '\0'; i++)
+		for (; str[i] != '\0';)
 		{
-			_putchar(str[i]);
+			_putchar(str[i++]);
 		}
 		_putchar(10);
 	}
