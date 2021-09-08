@@ -6,6 +6,6 @@
 
 : Also, I am open to pull requests and issues you may have in mind
 
-Grab some :coffee:, and :pizza: before using your  :desktop_computer.
+Grab some :coffee:, and :pizza: before using your  :desktop_compute.r:
 
 Happy coding folks !
