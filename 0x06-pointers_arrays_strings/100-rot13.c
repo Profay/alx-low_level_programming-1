@@ -5,23 +5,23 @@
  * @s: An input string to encode using rot13
  * Return: An encode string
  */
-char *rot13(char *s)
+char *rot13(char *)
 {
 	int i = 0;
 
-	while (s[i] != '\0')
+	while (*[i] != '\0')
 	{
-		while ((s[i] >= 'a' && s[i] <= 'z') ||
-				(s[i] >= 'A' && s[i] <= 'Z'))
+		while ((*[i] >= 'a' && *[i] <= 'z') ||
+				(*[i] >= 'A' && *[i] <= 'Z'))
 		{
-			if ((s[i] >= 'a' && s[i] <= 'm') ||
-					(s[i] >= 'A' && s[i] <= 'M'))
-				s[i] += 13;
+			if ((*[i] >= 'a' && *[i] <= 'm') ||
+					(*[i] >= 'A' && *[i] <= 'M'))
+				*[i] += 13;
 			else
-				s[i] -= 13;
+				*[i] -= 13;
 			i++;
 		}
 		i++;
 	}
-	return (s);
+	return (*);
 }
