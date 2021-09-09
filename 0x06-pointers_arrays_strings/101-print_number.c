@@ -1,49 +1,33 @@
-#include "holberton.h"
-#include <stdio.h>
+#include "main.h"
 /**
- * print_number - Print an integer using only _putchar
- * @n: integer to print
+ *
+ *
+ *
  */
-
 void print_number(int n)
 {
-	int power;
-	int neg;
-	int hold;
+	int adjustor, sign;
 
-	neg = 0;
-	power = 1;
-	hold = n;
-	if (n < 0)
+	adjustor = 1000000000;
+	sign = 1;
+	if (n > 0)
 	{
-		_putchar('-');
-		neg = 1;
+		n = n * -1;
+		sign = sign * -1;
 	}
-
-	while (hold > 9 || hold < -9)
+	if (n != 0)
 	{
-		power *= 10;
-		hold /= 10;
-	}
-
-	while (power > 0)
-	{
-		if (power > 9)
+		while (n / adjustor == 0)
+			adjustor = adjustor / 10;
+		if (sign == 1)
+			_putchar('-');
+		while (adjustor >= 1)
 		{
-			if (!neg)
-				_putchar((n / power % 10) + '0');
-			else
-				_putchar((n / power % 10) * -1 + '0');
-
-			power /= 10;
-		}
-		if (power == 1)
-		{
-			if (neg)
-				_putchar((n % 10) * -1 + '0');
-			else
-				_putchar(n % 10 + '0');
-			power = 0;
+			_putchar(-(n / adjustor) + '0');
+			n = n % adjustor;
+			adjustor = adjustor / 10;
 		}
 	}
+	else
+		_putchar('0');
 }
