@@ -1,4 +1,4 @@
-# Hi there :wave:, I am Francois Gonothi Toure, nicknamed gtfrans2re
+# Hi there :wave:, I Oyewale Oluwashogo Ayomide, nicknamed Profay.
 
 : this is my alx-low_level_programming git repository where everythign c-related and shell-related goes down
 
